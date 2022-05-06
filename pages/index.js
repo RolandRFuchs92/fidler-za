@@ -71,12 +71,12 @@ function MessageBoardForm(){
         <div className="border-b border-black p-2 text-lg font-bold mb-2">
           Message Board
         </div>
-        <label for="username" className='flex w-full flex-wrap mb-2'>
+        <label htmlFor="username" className='flex w-full flex-wrap mb-2'>
           Username
           <input type="text" className="h-10 border pl-2 rounded-md w-full mb-2"  {...formMethods.register("username", { required: "You need a username.", minLength: 2, maxLength: 16  })} />
           <sub className="text-red-500">{formMethods.formState.errors?.username?.message}</sub>
         </label>
-        <label for="message" className="flex w-full flex-wrap mb-2">
+        <label htmlFor="message" className="flex w-full flex-wrap mb-2">
           Message
           <input type="text" className="h-10 border pl-2 rounded-md w-100 mb-2" {...formMethods.register("message", { required: "You need to give a message.", min: 2, max: 128 })} />
           <sub className="text-red-500 mb-2">{formMethods.formState.errors?.message?.message}</sub>
